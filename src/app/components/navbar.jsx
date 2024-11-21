@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import NavLink from "./navLink";
 
 const links = [
   { url: "/", title: "Anasayfa" },
@@ -13,22 +14,20 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px 48">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       <div className="hidden md:flex gap-4">
         {links.map((link) => (
-          <Link href={link.url} key={link.title}>
-            {link.title}
-          </Link>
+          <NavLink link={link} key={link.title} />
         ))}
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden lg:flex">
         <Link
           href="/"
           className="text-sm bg-black rounded-md p-2 font-semibold flex items-center justify-center"
         >
           <span className="text-white">Avukat</span>
-          <span className="rounded bg-slate-50 p-1 font-semibold ml-1 flex items-center justify-center">
+          <span className="rounded bg-slate-50 p-2 font-semibold ml-2 flex items-center justify-center">
             Ali Kaan Aydın
           </span>
         </Link>
