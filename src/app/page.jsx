@@ -4,7 +4,7 @@ const Homepage = () => {
   return (
     <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-        <Image src="/lawyer.png" alt="" fill className="object-contain" />
+        <Image src="/lawyer.png" alt="" fill className="object-contain z-10" />
       </div>
 
       <div className="lg:h-full lg:w-1/2 h-1/2 flex flex-col gap-8 items-center justify-center mt-6">
