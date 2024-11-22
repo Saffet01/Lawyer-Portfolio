@@ -1,9 +1,28 @@
-import React from 'react'
+'use client'
+import React from "react";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
-  )
-}
+    <motion.div
+      className="h-full"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0vh" }}
+      transition={{ duration: 0.8 }}
+    >
+      <div>
+        
+        <div>
+          
+        </div>
 
-export default AboutPage
+        <div className="hidden">
+
+        </div>
+
+      </div>
+    </motion.div>
+  );
+};
+
+export default AboutPage;
