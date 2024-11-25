@@ -59,7 +59,7 @@ const AboutPage = () => {
           </div>
 
           <div className="flex flex-col gap-8 justify-center">
-            <h1>Çalışılan Alanlar</h1>
+            <h1 className="font-bold text-2xl">Çalışılan Alanlar</h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
               expedita esse architecto impedit, ut nesciunt, laborum commodi
@@ -71,47 +71,92 @@ const AboutPage = () => {
               repudiandae!
             </p>
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <Image
-                  className="rounded-t-lg"
-                  src="/medenihukuk.jpg"
-                  alt=""
-                  width={500}
-                  height={300}
-                />
-              </a>
-              <div class="p-5">
-                <a href="#">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-                <a
-                  href="#"
-                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Read more
-                  <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
+            <div className="flex flex-wrap gap-6 justify-center">
+              <div className="max-w-sm bg-gradient-to-b from-amber-50 to-orange-50 border border-amber-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 dark:from-amber-900/20 dark:to-orange-900/20 dark:border-amber-800/30">
+                <div className="relative w-full h-[200px]">
+                  <Image
+                    className="rounded-t-lg"
+                    src="/medenihukuk.png"
+                    alt="Medeni Hukuk"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                    onError={(e) => {
+                      console.log("Image error:", e);
+                    }}
+                  />
+                </div>
+                <div class="p-5">
+                  <a href="#">
+                    <h5 className="mb-3 text-2xl font-bold tracking-tight text-amber-900 hover:text-amber-800 transition-colors dark:text-amber-100">
+                      Medeni Hukuk
+                    </h5>
+                  </a>
+                  <p class="mb-4 font-normal text-amber-950/70 dark:text-amber-200/80">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem eum similique quod velit exercitationem! Error
+                    debitis quibusdam optio necessitatibus. Sed.
+                  </p>
+                </div>
+              </div>
+
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="relative w-full h-[200px]">
+                  <Image
+                    className="rounded-t-lg"
+                    src="/mirashukuku.png"
+                    alt="Miras Hukuku"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                    onError={(e) => {
+                      console.log("Image error:", e);
+                    }}
+                  />
+                </div>
+                <div class="p-5">
+                  <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Miras Hukuku
+                    </h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem eum similique quod velit exercitationem! Error
+                    debitis quibusdam optio necessitatibus. Sed.
+                  </p>
+                </div>
+              </div>
+
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="relative w-full h-[200px]">
+                  <Image
+                    className="rounded-t-lg"
+                    src="/cezahukuku.png"
+                    alt="Ceza Hukuku"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                    onError={(e) => {
+                      console.log("Image error:", e);
+                    }}
+                  />
+                </div>
+                <div class="p-5">
+                  <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Miras Hukuku
+                    </h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem eum similique quod velit exercitationem! Error
+                    debitis quibusdam optio necessitatibus. Sed.
+                  </p>
+                </div>
               </div>
             </div>
 
