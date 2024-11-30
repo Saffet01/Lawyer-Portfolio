@@ -71,8 +71,8 @@ const AboutPage = () => {
               repudiandae!
             </p>
 
-            <div className="flex flex-wrap gap-6 justify-center">
-              <div className="max-w-sm bg-gradient-to-b from-amber-50 to-orange-50 border border-amber-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 dark:from-amber-900/20 dark:to-orange-900/20 dark:border-amber-800/30">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+              <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div className="relative w-full h-[200px]">
                   <Image
                     className="rounded-t-lg"
@@ -89,11 +89,11 @@ const AboutPage = () => {
                 </div>
                 <div class="p-5">
                   <a href="#">
-                    <h5 className="mb-3 text-2xl font-bold tracking-tight text-amber-900 hover:text-amber-800 transition-colors dark:text-amber-100">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Medeni Hukuk
                     </h5>
                   </a>
-                  <p class="mb-4 font-normal text-amber-950/70 dark:text-amber-200/80">
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quidem eum similique quod velit exercitationem! Error
                     debitis quibusdam optio necessitatibus. Sed.
