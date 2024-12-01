@@ -1,38 +1,42 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import Brain from "../components/brain";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 const AboutPage = () => {
+  const containerRef = useRef();
+
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+
   return (
     <motion.div
       className="h-full"
       initial={{ y: "-200vh" }}
-      animate={{ y: "0vh" }}
-      transition={{ duration: 0.8 }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
     >
-      <div>
-        <div className="sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-8 md:gap-32 lg:gap-48 xl:gap-64">
-          <div className="flex flex-col gap-8 justify-center">
-            <h1 className="font-bold text-2xl">
-              Ali Kaan Aydın <span>kimdir?</span>
-            </h1>
-            <p className="text-xl font-light italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              earum libero cumque praesentium minus laboriosam sed voluptatum
-              soluta suscipit, culpa inventore commodi. Delectus enim dolores,
-              dolore maiores porro nam in ipsum quo placeat, laboriosam
-              quibusdam distinctio amet, molestiae laudantium voluptatum minus
-              odit impedit est! Asperiores.
+      {/* CONTAINER */}
+      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+        {/* TEXT CONTAINER */}
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+          {/* BIOGRAPHY CONTAINER */}
+          <div className="flex flex-col gap-12 justify-center">
+            {/* BIOGRAPHY TITLE */}
+            <h1 className="font-bold text-2xl">Hakkımda</h1>
+            {/* BIOGRAPHY DESC */}
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
+              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
+              suscipit! Vel doloremque numquam quam nihil.
             </p>
             <div className="self-end">
-              <Image
-                src="/sign.png"
-                alt=""
-                className="object-contain z-10"
-                height={80}
-                width={240}
-              />
+              <Image src="/sign.png" width={200} height={100} alt="imza" />
             </div>
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
@@ -58,108 +62,122 @@ const AboutPage = () => {
             </motion.svg>
           </div>
 
-          <div className="flex flex-col gap-8 justify-center">
-            <h1 className="font-bold text-2xl">Çalışılan Alanlar</h1>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
-              expedita esse architecto impedit, ut nesciunt, laborum commodi
-              placeat quisquam quia beatae, neque vel magnam cupiditate!
-              Corporis sed sapiente quisquam accusantium asperiores quaerat,
-              dignissimos obcaecati quis tenetur non. Inventore asperiores quas
-              at possimus dolorum mollitia tenetur, iure, accusantium
-              perferendis cum consectetur! Debitis assumenda temporibus
-              repudiandae!
-            </p>
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+            {/* SKILL TITLE */}
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              Alanlar
+            </motion.h1>
+            {/* SKILL LIST */}
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              className="flex gap-4 flex-wrap"
+            >
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Dolores expedita esse architecto impedit, ut nesciunt, laborum
+                commodi placeat quisquam quia beatae, neque vel magnam
+                cupiditate! Corporis sed sapiente quisquam accusantium
+                asperiores quaerat, dignissimos obcaecati quis tenetur non.
+                Inventore asperiores quas at possimus dolorum mollitia tenetur,
+                iure, accusantium perferendis cum consectetur! Debitis assumenda
+                temporibus repudiandae!
+              </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-              <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div className="relative w-full h-[200px]">
-                  <Image
-                    className="rounded-t-lg"
-                    src="/medenihukuk.png"
-                    alt="Medeni Hukuk"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                    onError={(e) => {
-                      console.log("Image error:", e);
-                    }}
-                  />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <div className="relative w-full h-[200px]">
+                    <Image
+                      className="rounded-t-lg"
+                      src="/medenihukuk.png"
+                      alt="Medeni Hukuk"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
+                      onError={(e) => {
+                        console.log("Image error:", e);
+                      }}
+                    />
+                  </div>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Medeni Hukuk
+                      </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quidem eum similique quod velit exercitationem! Error
+                      debitis quibusdam optio necessitatibus. Sed.
+                    </p>
+                  </div>
                 </div>
-                <div class="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      Medeni Hukuk
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quidem eum similique quod velit exercitationem! Error
-                    debitis quibusdam optio necessitatibus. Sed.
-                  </p>
+
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <div className="relative w-full h-[200px]">
+                    <Image
+                      className="rounded-t-lg"
+                      src="/mirashukuku.png"
+                      alt="Miras Hukuku"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
+                      onError={(e) => {
+                        console.log("Image error:", e);
+                      }}
+                    />
+                  </div>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Miras Hukuku
+                      </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quidem eum similique quod velit exercitationem! Error
+                      debitis quibusdam optio necessitatibus. Sed.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <div className="relative w-full h-[200px]">
+                    <Image
+                      className="rounded-t-lg"
+                      src="/cezahukuku.png"
+                      alt="Ceza Hukuku"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
+                      onError={(e) => {
+                        console.log("Image error:", e);
+                      }}
+                    />
+                  </div>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Miras Hukuku
+                      </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quidem eum similique quod velit exercitationem! Error
+                      debitis quibusdam optio necessitatibus. Sed.
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div className="relative w-full h-[200px]">
-                  <Image
-                    className="rounded-t-lg"
-                    src="/mirashukuku.png"
-                    alt="Miras Hukuku"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                    onError={(e) => {
-                      console.log("Image error:", e);
-                    }}
-                  />
-                </div>
-                <div class="p-5">
-                  <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      Miras Hukuku
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quidem eum similique quod velit exercitationem! Error
-                    debitis quibusdam optio necessitatibus. Sed.
-                  </p>
-                </div>
-              </div>
-
-              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div className="relative w-full h-[200px]">
-                  <Image
-                    className="rounded-t-lg"
-                    src="/cezahukuku.png"
-                    alt="Ceza Hukuku"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                    onError={(e) => {
-                      console.log("Image error:", e);
-                    }}
-                  />
-                </div>
-                <div class="p-5">
-                  <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      Miras Hukuku
-                    </h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quidem eum similique quod velit exercitationem! Error
-                    debitis quibusdam optio necessitatibus. Sed.
-                  </p>
-                </div>
-              </div>
-            </div>
-
+            </motion.div>
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
@@ -183,11 +201,11 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
-
-          <div>experience</div>
+          
         </div>
-
-        <div className="hidden">svg</div>
+        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
+          <Brain scrollYProgress={scrollYProgress} />
+        </div>
       </div>
     </motion.div>
   );
