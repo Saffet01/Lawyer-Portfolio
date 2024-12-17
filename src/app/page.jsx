@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -39,7 +40,7 @@ const Homepage = () => {
 
           <div>
             <button className="p-4 rounded-lg ring-1 ring-black">
-              İletişim
+              <Link href="/contact">İletişim</Link>
             </button>
           </div>
         </div>
