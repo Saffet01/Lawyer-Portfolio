@@ -12,7 +12,6 @@ const AboutPage = () => {
   const skillRef = useRef();
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-
   return (
     <motion.div
       className="h-full"
@@ -30,36 +29,23 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">Hakkımda</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Distinctio fuga quis vero quisquam, sapiente odio obcaecati
+              voluptas harum labore quaerat sunt omnis odit eveniet. Accusamus
+              nostrum provident doloribus, dicta illo assumenda nam esse
+              molestiae accusantium autem aut laboriosam expedita perferendis
+              dolore. Illo, porro culpa quod inventore nihil dolorum magnam
+              voluptates rerum iste eos, id excepturi quo, eveniet voluptatem
+              expedita quisquam dicta cumque dolores. Hic, voluptatum.
+              Blanditiis consequuntur repudiandae quasi maiores ex laboriosam
+              dicta voluptatem adipisci, nesciunt veniam officiis incidunt. Nam
+              repellendus pariatur et corporis dolorum voluptatem fugit numquam,
+              ullam animi quia sunt voluptatum dolores voluptates placeat atque
+              excepturi architecto cum.
             </p>
             <div className="self-end">
               <Image src="/sign.png" width={200} height={100} alt="imza" />
             </div>
-            <motion.svg
-              initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              width={50}
-              height={50}
-            >
-              <path
-                d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
-              <path
-                d="M15 11L12 14L9 11"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-            </motion.svg>
           </div>
 
           <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
@@ -76,7 +62,7 @@ const AboutPage = () => {
             <motion.div
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
-              className="flex gap-4 flex-wrap"
+              className="flex gap-4 flex-wrap mb-12"
             >
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -178,30 +164,7 @@ const AboutPage = () => {
                 </div>
               </div>
             </motion.div>
-            <motion.svg
-              initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              width={50}
-              height={50}
-            >
-              <path
-                d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
-              <path
-                d="M15 11L12 14L9 11"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-            </motion.svg>
           </div>
-          
         </div>
         <div className="hidden lg:block w-1/4 sticky top-0 z-30">
           <Brain scrollYProgress={scrollYProgress} />
