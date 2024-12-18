@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lawyer Portfolio
 
-## Getting Started
+This project aims to develop a website for Lawyer Ali Kaan Aydın. The website allows users to get information about the lawyer, contact him, and learn more about the services offered.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tools and Libraries](#tools-and-libraries)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [Contributors](#contributors)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To run the project locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/lawyer-portfolio.git
+   cd lawyer-portfolio
+   ```
 
-## Learn More
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Set up environment variables:
+   Add your Google Maps API key to the `.env.local` file:
+   ```
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=YOUR_API_KEY_HERE
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+The project is a Next.js-based web application. Once the development server is running, you can view the application in your browser at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tools and Libraries
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The main tools and libraries used in this project are:
+
+- **Next.js**: A React framework with server-side rendering and static site generation features.
+- **React**: A JavaScript library for building user interfaces.
+- **Framer Motion**: A library for animations and transitions.
+- **@react-google-maps/api**: A library for using Google Maps API in React applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+
+## Project Structure
+
+- **src/app/contact/page.jsx**: Contact page with Google Maps integration and a contact form.
+- **src/app/about/page.jsx**: About page with the lawyer's biography and areas of expertise.
+- **src/app/components/navbar.jsx**: Navigation bar component for page transitions.
+- **src/app/components/brain.jsx**: Animated SVG component.
+- **src/app/layout.js**: Layout component used across the application.
+- **src/app/components/transitionProvider.jsx**: Component providing page transition animations.
+
+## Screenshots
+
+Below is a GIF showcasing the page transition animation used in the project:
+
+![Page Transition Animation](public/screenRecording.gif)
+
+## Contributors
+
+- [Ali Kaan Aydın](https://github.com/username)
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
