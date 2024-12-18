@@ -67,9 +67,7 @@ Below is a GIF showcasing the page transition animation used in the project:
 
 ![Page Transition Animation](public/screenRecording.gif)
 
-## Contributors
 
-- [Ali Kaan Aydın](https://github.com/username)
 
 ## License
 
