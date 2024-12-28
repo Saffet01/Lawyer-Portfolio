@@ -22,27 +22,36 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-28 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-3/4 lg:pr-0">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-28 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-48 lg:w-3/4 lg:pr-0">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="h-full flex flex-col gap-12 justify-center">
+          <div className="h-full flex flex-col gap-8 justify-center">
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">Hakkımda</h1>
+            <h1 className="font-bold text-2xl">Ali Kaan Aydın kimdir?</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Distinctio fuga quis vero quisquam, sapiente odio obcaecati
-              voluptas harum labore quaerat sunt omnis odit eveniet. Accusamus
-              nostrum provident doloribus, dicta illo assumenda nam esse
-              molestiae accusantium autem aut laboriosam expedita perferendis
-              dolore. Illo, porro culpa quod inventore nihil dolorum magnam
-              voluptates rerum iste eos, id excepturi quo, eveniet voluptatem
-              expedita quisquam dicta cumque dolores. Hic, voluptatum.
-              Blanditiis consequuntur repudiandae quasi maiores ex laboriosam
-              dicta voluptatem adipisci, nesciunt veniam officiis incidunt. Nam
-              repellendus pariatur et corporis dolorum voluptatem fugit numquam,
-              ullam animi quia sunt voluptatum dolores voluptates placeat atque
-              excepturi architecto cum.
+              1 Nisan 1997 tarihinde dünyaya gelen Ali Kaan Aydın, ilkokul ve
+              ortaokul eğitimini Samsun&apos;un Terme ilçesinde başarıyla
+              tamamlamış, lise eğitimine ise Aziz Atik Fen Lisesi&apos;nde devam
+              etmiştir. Eğitim hayatındaki başarısıyla dikkat çeken Ali Kaan
+              Aydın, hukuk alanındaki tutkusunu Atatürk Üniversitesi Hukuk
+              Fakültesi&apos;nde aldığı eğitimle hayata geçirmiştir.
+              Mezuniyetinin ardından başladığı avukatlık kariyerinde 4 yılı
+              aşkın süredir müvekkillerine hukuki çözümler sunmaktadır.
             </p>
+            <p className="text-lg">
+              Ali Kaan Aydın,özellikle miras hukuku, ceza hukuku ve medeni hukuk
+              alanlarında derinlemesine uzmanlaşmış, bu alanlarda yürüttüğü
+              davalar ve sunduğu hukuki danışmanlık hizmetleriyle adından söz
+              ettirmiştir. Gerek bireysel gerekse kurumsal müvekkillerine
+              etkili, sonuç odaklı ve güvenilir bir hizmet sunmayı ilke
+              edinmiştir.
+            </p>
+            <p className="text-lg">
+              Sunduğu hizmetlerde sadece hukuki çözümler sunmakla kalmayıp, aynı
+              zamanda müvekkillerinin haklarını en iyi şekilde savunarak onların
+              yanında olduğunu hissettiren bir yaklaşımı benimsemektedir.
+            </p>
+
             <div className="self-end">
               <Image src="/sign.png" width={200} height={100} alt="imza" />
             </div>
@@ -56,7 +65,7 @@ const AboutPage = () => {
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
-              Alanlar
+              Hizmet Alanları
             </motion.h1>
             {/* SKILL LIST */}
             <motion.div
@@ -65,14 +74,13 @@ const AboutPage = () => {
               className="flex gap-4 flex-wrap mb-12"
             >
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolores expedita esse architecto impedit, ut nesciunt, laborum
-                commodi placeat quisquam quia beatae, neque vel magnam
-                cupiditate! Corporis sed sapiente quisquam accusantium
-                asperiores quaerat, dignissimos obcaecati quis tenetur non.
-                Inventore asperiores quas at possimus dolorum mollitia tenetur,
-                iure, accusantium perferendis cum consectetur! Debitis assumenda
-                temporibus repudiandae!
+                Ali Kaan Aydın, hukuk alanındaki uzmanlığı ve deneyimiyle
+                müvekkillerine çeşitli hukuk dallarında profesyonel çözümler
+                sunmaktadır. Medeni hukuk, miras hukuku ve ceza hukuku başta
+                olmak üzere birçok alanda etkili ve sonuç odaklı hizmetler
+                sunarak müvekkillerinin haklarını en iyi şekilde korumayı
+                amaçlamaktadır. Aşağıda, sunduğumuz başlıca hizmet alanlarını
+                inceleyebilirsiniz.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
@@ -98,9 +106,12 @@ const AboutPage = () => {
                       </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quidem eum similique quod velit exercitationem! Error
-                      debitis quibusdam optio necessitatibus. Sed.
+                      Medeni hukuk alanında, bireylerin özel hayatlarını
+                      düzenleyen hukuki meselelerde danışmanlık ve temsil
+                      hizmeti sunmaktayız. Aile hukuku, sözleşme hukuku,
+                      mülkiyet hakları gibi konularda müvekkillerimizin
+                      haklarını en iyi şekilde koruyarak sonuç odaklı çözümler
+                      üretmekteyiz.
                     </p>
                   </div>
                 </div>
@@ -127,9 +138,11 @@ const AboutPage = () => {
                       </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quidem eum similique quod velit exercitationem! Error
-                      debitis quibusdam optio necessitatibus. Sed.
+                      Miras hukuku alanında, miras paylaşımı, vasiyetname
+                      hazırlanması ve miras davalarına yönelik kapsamlı hukuki
+                      destek sağlamaktayız. Aile içi hassas dengeleri gözeterek
+                      müvekkillerimizin haklarının korunmasını ve adil çözümler
+                      üretilmesini hedefliyoruz.
                     </p>
                   </div>
                 </div>
@@ -152,13 +165,15 @@ const AboutPage = () => {
                   <div class="p-5">
                     <a href="#">
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Miras Hukuku
+                        Ceza Hukuku
                       </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quidem eum similique quod velit exercitationem! Error
-                      debitis quibusdam optio necessitatibus. Sed.
+                      Ceza hukuku alanında, müvekkillerimizin haklarını en
+                      etkili şekilde savunmak için suç isnatlarına karşı
+                      kapsamlı bir savunma stratejisi geliştirmekteyiz. Her
+                      aşamada müvekkillerimizin yanındayız ve adaletin
+                      sağlanması için kararlılıkla çalışıyoruz
                     </p>
                   </div>
                 </div>
